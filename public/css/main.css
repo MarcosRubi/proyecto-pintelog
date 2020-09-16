@@ -1,0 +1,217 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://demo.w3layouts.com/demos_new/template_demo/16-01-2020/active-login-form-demo_Free/227341457/web/images/women.jpg);
+}
+
+a {
+  text-decoration: none;
+  color: #0288d1;
+}
+
+p {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  margin: 20px 0px;
+}
+ul li {
+  list-style: none;
+}
+ul li:hover {
+  transform: scale(1.2, 1.2);
+  transition: all 500ms;
+}
+ul a {
+  font-size: 1.9rem;
+  padding: 5px 10px;
+}
+
+span {
+  color: #333;
+  font-size: 0.8rem;
+  padding: 5px 0px 10px 0px;
+  display: block;
+}
+
+h1 {
+  margin-bottom: 0px;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  overflow: auto;
+  background: #f8f8f8;
+  padding: 20px 40px;
+  border-radius: 20px;
+  box-shadow: 2px 0px 7px wheat;
+  animation-duration: 0.4s;
+  animation-name: animatetop;
+}
+.modal div {
+  position: relative;
+}
+.modal div span {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  font-size: 1.2rem;
+  padding-left: 15px;
+}
+.modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal .close:hover,
+.modal .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 300px;
+    opacity: 1;
+  }
+}
+.box {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+  line-height: 50px;
+  margin: 20px 0px;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .box {
+    margin: 40px 0px;
+  }
+
+  .box .form-login {
+    width: 90%;
+    margin: 0px 5%;
+  }
+}
+input[type=text],
+input[type=password],
+input[type=email] {
+  width: 80%;
+  height: 45px;
+  margin: 10px 0px;
+  padding-left: 45px;
+  outline: none;
+  border: 1px solid #78909c;
+  border-radius: 5px;
+}
+
+::placeholder,
+span i {
+  color: #78909c;
+}
+
+input[type=submit] {
+  height: 50px;
+  padding: 10px;
+  border: none;
+  background: #212121;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 300ms;
+}
+input[type=submit]:hover {
+  background: #fff;
+  color: #000;
+}
+
+input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+}
+
+input[type=text]:focus ~ span i,
+input[type=text]:valid ~ span i,
+input[type=email]:focus ~ span i,
+input[type=email]:valid ~ span i,
+input[type=password]:focus ~ span i,
+input[type=password]:valid ~ span i {
+  color: #0288d1;
+  transition: all 500ms;
+}
+
+input[type=text]:focus,
+input[type=text]:valid,
+input[type=email]:focus,
+input[type=email]:valid,
+input[type=password]:focus,
+input[type=password]:valid {
+  border: 1px solid #0288d1;
+  transition: all 500ms;
+}
+
+.form-login {
+  width: 350px;
+  background: #fff;
+  margin: 0px 10%;
+  padding: 10px 20px;
+}
+.form-login h1 {
+  font-size: 2rem;
+}
+.form-login .align-center {
+  display: flex;
+  align-items: center;
+}
+.form-login .align-center label {
+  cursor: pointer;
+  margin-left: 5px;
+}
+.form-login div {
+  position: relative;
+}
+.form-login div span {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  font-size: 1.2rem;
+  padding-left: 15px;
+}
+
+/*# sourceMappingURL=main.css.map */
