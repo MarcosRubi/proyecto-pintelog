@@ -9,27 +9,27 @@
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
-    <div class="box">
+    <div class="box center">
       <form class="form-login" action="#" id="login">
         <h1>Iniciar sesión</h1><span>Hermosas fotos libres!</span>
-        <div>
+        <div class="m-x1">
           <input type="text" name="username" id="username" placeholder="Usuario" required=""/><span><i class="fa fa-user"></i></span>
         </div>
-        <div>
+        <div class="m-x1">
           <input type="password" name="password" id="password" placeholder="Contraseña" required=""/><span><i class="fa fa-key"></i></span>
         </div>
-        <div class="d-flex flex-wrap">
+        <div class="d-flex flex-wrap jc-between ">
           <div class="align-center">
             <input type="checkbox" name="chkRemember" id="chkRemember"/>
             <label for="chkRemember">Recordarme</label>
           </div>
-          <div>
-            <input type="submit" name="submit" value="Iniciar sesión"/>
+          <div class="m-x1">
+            <input class="btn-primary" type="submit" name="submit" value="Iniciar sesión"/>
           </div>
-        </div><a href="#" id="showModal">Olvide mi contraseña</a>
+        </div><a class="m-x1 d-block" href="#" id="showModal">Olvide mi contraseña</a>
         <div class="social">
           <p>Iniciar sesión con</p>
-          <ul>
+          <ul class="social__options ">
             <li><a href="#"><i class="fab fa-facebook"></i></a></li>
             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
           </ul>
@@ -44,7 +44,7 @@
           <input type="email" name="email" id="email" placeholder="ingresa tu email" required=""/><span><i class="fas fa-envelope"></i></span>
         </div>
         <div>
-          <input type="submit" name="submit" id="submitEmail" value="Siguiente"/>
+          <input class="btn-primary" type="submit" name="submit" id="submitEmail" value="Siguiente"/>
         </div>
       </form>
     </div>
@@ -55,7 +55,7 @@
           <input type="text" name="code" id="code" placeholder="ingresa el código" required=""/><span><i class="fas fa-key"></i></span>
         </div>
         <div>
-          <input type="submit" name="submitCode" value="Verificar" id="submitCode"/>
+          <input class="btn-primary" type="submit" name="submitCode" value="Verificar" id="submitCode"/>
         </div>
       </form>
       <p>No has recibido un email? <a href="#">Reenviar código</a></p>
@@ -70,7 +70,7 @@
           <input type="password" name="password2" id="password2" placeholder="Repita la contraseña" required=""/><span><i class="fa fa-key"></i></span>
         </div>
         <div>
-          <input type="submit" name="submitResPassword" id="submitResPassword" value="Actualizar"/>
+          <input class="btn-primary" type="submit" name="submitResPassword" id="submitResPassword" value="Actualizar"/>
         </div>
       </form>
     </div>
