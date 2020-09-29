@@ -13,10 +13,14 @@
       <form class="form-login" action="#" id="login">
         <h1>Iniciar sesión</h1><span>Hermosas fotos libres!</span>
         <div class="m-x1">
-          <input type="text" name="username" id="username" placeholder="Usuario" required=""/><span><i class="fa fa-user"></i></span>
+          <input type="text" name="username" id="username" required="" autocomplete="off"/><span><i class="fa fa-user"></i></span>
+          <label class="placeholder">Usuario</label>
         </div>
         <div class="m-x1">
-          <input type="password" name="password" id="password" placeholder="Contraseña" required=""/><span><i class="fa fa-key"></i></span>
+          <input class="password" type="password" name="password" id="password" required=""/><span><i class="fa fa-key"></i></span>
+          <label class="placeholder">Contraseña</label>
+          <label class="labelPassword showPassword"><i class="fa fa-eye"> </i></label>
+          <label class="labelPassword hiddenPassword"><i class="fas fa-eye-slash"> </i></label>
         </div>
         <div class="d-flex flex-wrap jc-between ">
           <div class="align-center">
@@ -40,8 +44,9 @@
     <div class="modal" id="modalStep1"><span class="close">&times;</span>
       <h1>Restablecer contraseña</h1><span>Enviaremos un email con un código para que puedas restablecer la contraseña</span>
       <form action="#" method="POST" id="formStep1">
-        <div>
-          <input type="email" name="email" id="email" placeholder="ingresa tu email" required=""/><span><i class="fas fa-envelope"></i></span>
+        <div class="m-x1">
+          <input type="email" name="email" id="email" required=""/><span><i class="fas fa-envelope"></i></span>
+          <label class="placeholder">Ingresar email</label>
         </div>
         <div>
           <input class="btn-primary" type="submit" name="submit" id="submitEmail" value="Siguiente"/>
@@ -49,10 +54,11 @@
       </form>
     </div>
     <div class="modal" id="modalStep2"><span class="close">&times;</span>
-      <h1>Restablecer contraseña</h1><span>Ingresar código</span>
+      <h1>Restablecer contraseña</h1><span>Ingresar el código que te hemos enviado por email</span>
       <form action="#" method="POST" id="formStep2">
-        <div>
-          <input type="text" name="code" id="code" placeholder="ingresa el código" required=""/><span><i class="fas fa-key"></i></span>
+        <div class="m-x1">
+          <input type="text" name="code" id="code" required="" autocomplete="off"/><span><i class="fas fa-key"></i></span>
+          <label class="placeholder">Ingresar código</label>
         </div>
         <div>
           <input class="btn-primary" type="submit" name="submitCode" value="Verificar" id="submitCode"/>
@@ -63,11 +69,11 @@
     <div class="modal" id="modalStep3"><span class="close">&times;</span>
       <h1>Restablecer contraseña</h1><span>Ingrese la nueva contraseña</span>
       <form action="#" method="POST" id="formStep3">
-        <div>
-          <input type="password" name="password1" id="password1" placeholder="Contraseña" required=""/><span><i class="fa fa-key"></i></span>
-        </div>
-        <div>
-          <input type="password" name="password2" id="password2" placeholder="Repita la contraseña" required=""/><span><i class="fa fa-key"></i></span>
+        <div class="m-x1">
+          <input class="password" type="password" name="password1" id="password1" required="" autocomplete="off"/><span><i class="fa fa-key"></i></span>
+          <label class="placeholder">Contraseña</label>
+          <label class="labelPassword showPassword"><i class="fa fa-eye"> </i></label>
+          <label class="labelPassword hiddenPassword"><i class="fas fa-eye-slash"> </i></label>
         </div>
         <div>
           <input class="btn-primary" type="submit" name="submitResPassword" id="submitResPassword" value="Actualizar"/>

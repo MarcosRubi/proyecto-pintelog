@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
 
-  if (window.location.href.indexOf("iniciar-sesion") > -1 || window.location.href.indexOf("registro") > -1) {
+  if (window.location.href.indexOf("iniciar-sesion") > -1) {
     let container = document.querySelector('.box');
 
     let btnStep1 = document.getElementById('showModal');
@@ -54,12 +54,41 @@ window.addEventListener('load', () => {
       divModalStep3.style.display = 'none';
       container.style.filter = '';
     }
+
   }
-  
-  if (window.location.href.indexOf("usuario") > -1){
+  if (window.location.href.indexOf("iniciar-sesion") > -1 || window.location.href.indexOf("registro") > -1) {
+    //Mostrar contraseña
+    let iconShowPassword = document.querySelectorAll('.showPassword');
+    let iconHiddenPassword = document.querySelectorAll('.hiddenPassword');
+    let inputPass = document.querySelectorAll('.password');
+
+    iconShowPassword.forEach(iconShow => {
+      iconShow.onclick = function () {
+        inputPass.forEach(input => {
+          input.type = 'text';
+        });
+        iconShow.style.display = 'none';
+        iconHiddenPassword.forEach(iconHidden => {
+          iconHidden.style.display = 'block';
+        });
+      }
+    });
+    iconHiddenPassword.forEach(iconHidden => {
+      iconHidden.onclick = function () {
+        inputPass.forEach(input => {
+          input.type = 'password';
+        });
+        iconHidden.style.display = 'none';
+        iconShowPassword.forEach(iconShow => {
+          iconShow.style.display = 'block';
+        });
+      }
+    });
+  }
+  if (window.location.href.indexOf("usuario") > -1) {
     let menu = document.getElementById('submenu');
 
-    menu.onclick = function(){
+    menu.onclick = function () {
       document.querySelector('.submenu').classList.toggle('d-block');
     }
   }
